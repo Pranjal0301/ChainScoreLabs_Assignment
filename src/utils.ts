@@ -64,7 +64,7 @@ const AUTHENTICATION = `
  }
 `;
 
-export const authenticate = async (address, signature) => {
+export const authenticate = async (address: string | undefined, signature: string | any) => {
   const { data } = await apolloClient.mutate({
     mutation: gql(AUTHENTICATION),
     variables: {

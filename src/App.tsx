@@ -4,7 +4,7 @@ import './App.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useSignMessage  } from 'wagmi';
 import { generateChallenge, authenticate, getPublications } from './utils';
-import { Profile, Publications } from '@lens-protocol/widgets-react'
+import { Publications } from '@lens-protocol/widgets-react'
 // import { useExploreProfiles } from '@lens-protocol/react-web'
 
 const App: React.FC = () => {
@@ -31,10 +31,10 @@ const App: React.FC = () => {
   const handleSubmit = () => {
     // Use searchText state value here or perform any action with it
 
-    console.log(searchText);
+    console.log( searchText);
   };
 
-  //wallet auth using wagmi hooks
+  //wallet auth using wagmi hook
   const signIn = async () => {
     try {
       if (!connected) {
