@@ -31,7 +31,7 @@ const App: React.FC = () => {
   const handleSubmit = () => {
     // Use searchText state value here or perform any action with it
 
-    console.log( searchText);
+    console.log(searchText);
   };
 
   //wallet auth using wagmi hooks
@@ -65,14 +65,14 @@ const App: React.FC = () => {
       <div className='content'>
       <ConnectButton />
       <button className='loginbtn' onClick={signIn} >Lens Login</button>
-      <div className="wrap">
+      {connected && <div className="wrap">
          <div className="search">
           <input type="text" className="searchTerm" placeholder="Search User" value={searchText} onChange={handleInputChange} />
           <button type="submit" className="searchButton" onClick={handleSubmit}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><g data-name="Layer 2"><path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z" data-name="search"></path></g></svg>
           </button>
          </div>
-      </div>
+      </div>}
 
       <br /> 
       <br />
