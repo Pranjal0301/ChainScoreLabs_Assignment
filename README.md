@@ -1,6 +1,8 @@
-# React + TypeScript + Vite
+# A Simple Dapp with Lens Protocol
 
 Project live Demo: https://lens-protocol-dapp.netlify.app
+
+Basic Requriement to run the project include : A crypto wallet to log in
 
 This projec uses React, Next.js, TypeScript, Lens Protocol, and the Lens SDK to build out a simple social application.
 
