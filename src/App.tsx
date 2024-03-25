@@ -5,6 +5,9 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useSignMessage  } from 'wagmi';
 import { generateChallenge, authenticate, getPublications } from './utils';
 import { Publications } from '@lens-protocol/widgets-react'
+import {
+  Profile
+} from '@lens-protocol/widgets-react'
 // import { useExploreProfiles } from '@lens-protocol/react-web'
 
 const App: React.FC = () => {
@@ -76,9 +79,15 @@ const App: React.FC = () => {
 
       <br /> 
       <br />
-      {connected && <h2>-----User Feed-----</h2>}
       
+      {connected && <Profile handle={`lens/${searchText}`} />}
+
+      {connected && <h2>-----User Feed-----</h2>}
+
+      {/* tempeorary fix renders publications for search */}
       {connected && <Publications handle={`lens/${searchText}`} />}
+
+      
       
       </div>
     </>
